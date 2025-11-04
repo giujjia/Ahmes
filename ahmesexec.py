@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Script de execução AHMES
-Automatiza a compilação e execução de programas AHMES
-"""
-
+#script de execução AHMES - Automatiza a compilação e execução de programas AHMES
 import sys
 import subprocess
 import os

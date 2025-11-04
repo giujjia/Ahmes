@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Simulador AHMES
-Baseado no simulador Neander do Prof. Dr. Marcello Batista Ribeiro
-"""
+# Simulador AHMES
 
 import sys
 import math

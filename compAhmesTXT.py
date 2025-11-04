@@ -1,11 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Compilador AHMES
-Converte arquivos de memória do AHMES para formato executável
-Baseado no compNeanderTXT.c do Prof. Dr. Marcello Batista Ribeiro
-"""
-
+#Compilador AHMES - Converte arquivos de memória do AHMES para formato executável
 import sys
 import re
 
