@@ -112,55 +112,12 @@ O AHMES possui:
 
 ## Arquivos de Teste
 
-O projeto inclui vários arquivos de teste para validar diferentes funcionalidades do simulador:
-
-### Arquivos de Teste Disponíveis
-
-1. **`soma_ahmes.TXT`** - Teste básico (5 + 4 = 9)
-2. **`sub_ahmes.TXT`** - Testes de subtração (10-3, 10-5, 10-10)
-3. **`overflow_ahmes.TXT`** - Testes de overflow e carry em adições
-4. **`logicas_ahmes.TXT`** - Testes de operações lógicas (AND, OR, NOT)
-5. **`desvios_ahmes.TXT`** - Testes de desvios condicionais (JZ, JNZ, JN, JP)
-6. **`shift_ahmes.TXT`** - Testes de deslocamentos (SHL, SHR, ROL, ROR)
-7. **`negativo_ahmes.TXT`** - Testes com números negativos e flag N
-
-### Executando os Testes
-
 ```bash
-# Teste básico
+# Teste de adição
 python ahmesexec.py soma_ahmes.TXT
 
-# Testes de subtração
+# Teste de subtração
 python ahmesexec.py sub_ahmes.TXT
-
-# Testes de overflow (valida flags C e V)
-python ahmesexec.py overflow_ahmes.TXT
-
-# Testes de operações lógicas
-python ahmesexec.py logicas_ahmes.TXT
-
-# Testes de desvios condicionais
-python ahmesexec.py desvios_ahmes.TXT
-
-# Testes de deslocamentos e rotações
-python ahmesexec.py shift_ahmes.TXT
-
-# Testes com números negativos (complemento de 2)
-python ahmesexec.py negativo_ahmes.TXT
 ```
 
-### O Que Cada Teste Valida
 
-- **sub_ahmes.TXT**: Subtrações normais e resultado zero
-- **overflow_ahmes.TXT**: Flags C (carry) e V (overflow), wraparound em 255
-- **logicas_ahmes.TXT**: Operações bit a bit e flag Z
-- **desvios_ahmes.TXT**: Desvios baseados em flags Z e N
-- **shift_ahmes.TXT**: Deslocamentos, rotações e flag C
-- **negativo_ahmes.TXT**: Representação em complemento de 2 e flag N
-
-### Valores Importantes para Testes
-
-- **Overflow**: 200 + 56 = 256 → 0 (C=1), 127 + 1 = 128 (V=1, N=1)
-- **Negativos**: 255 = -1, 254 = -2, 128 = -128 (complemento de 2)
-- **Operações lógicas**: 170 AND 255 = 170, NOT 170 = 85
-- **Deslocamentos**: 1 SHL = 2, 128 SHL = 0 (C=1)
